@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./../Assignment1/String.js"></script>
+     <script>
+        window.onload = function () {
+            // create an instance of the MyObject
+            var O1 = new MyObject();
+
+
+            var Para =" The James Bond series focuses on a fictional British Secret Service agent created in 1953 by writer Ian Fleming, who featured him in twelve novels and two short-story collections. Since Fleming's death in 1964, eight other authors have written authorised Bond novels or novelisations: Kingsley Amis, Christopher Wood, John Gardner, Raymond Benson, Sebastian Faulks, Jeffery Deaver, William Boyd, and Anthony Horowitz. The latest novel is Forever and a Day by Anthony Horowitz, published in May 2018. Additionally Charlie Higson wrote a series on a young James Bond, and Kate Westbrook wrote three novels based on the diaries of a recurring series character, Moneypenny. ";
+            
+            document.getElementById('dv0').innerHTML=Para;
+            document.getElementById('dv1').innerHTML=O1.getBlankSpace(Para);
+            document.getElementById('dv2').innerHTML=O1.getStatements(Para);
+            document.getElementById('dv3').innerHTML=O1.convertToTitleCase(Para);
+            document.getElementById('dv4').innerHTML=O1.getComma(Para);
+            document.getElementById('dv5').innerHTML=O1.vowel_list(Para);
+            document.getElementById('dv6').innerHTML=O1.Specific_Word_Count(Para, 'Day');
+            document.getElementById('dv7').innerHTML=O1.Word_Count(Para);
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Using Reference Function</h1>
+    <br>
+    <div>  Given String is: <label id="dv0"></label></div>
+    <br>
+    <div> Blank Spaces: <label id="dv1"></label></div>
+    <br>
+    <div> Statements: <label id="dv2"></label></div>
+    <br>
+    <div> Title Case: <label id="dv3"></label></div>
+    <br>
+    <div> Comma: <label id="dv4"></label></div>
+    <br>
+    <div> Vowels: <label id="dv5"></label></div>
+    <br>
+    <div> Specific_Word_Count: <label id="dv6"></label></div>
+    <br>
+    <div> Word_Count: <label id="dv7"></label></div>
+    <br>
+
+</body>
+</html>
