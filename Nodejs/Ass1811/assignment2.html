@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="./../code/promise.js"></script> -->
+    <script>
+        function getData() {
+            return new Promise((resolve, reject) => {
+                let ajax = new XMLHttpRequest();
+                let employ=document.getElementById('resp');
+
+                ajax.onload = function () {
+
+                   employ.innerHTML  += ajax.response;
+                   console.log(ajax.response.data.EmpNo); 
+                    // success
+                    resolve(ajax.response);
+                };
+
+                ajax.onerror = function (error) {
+                    // failure  
+                    reject(e);
+                };
+
+                // open a request for REST API, start an async calls
+                ajax.open("GET", "http://localhost:9090/api/getAll");
+                // start sending the request
+                ajax.send();
+            });
+        }
+        function postData() {
+            var employees = {
+                EmpNo: document.getElementById('empNo').value,
+                EmpName: document.getElementById('empName').value,
+                Designation: document.getElementById('designation').value,
+                Department: document.getElementById('dept').value,
+                Salary: document.getElementById('salary').value
+
+            };
+            console.log(employees);
+            return new Promise((resolve, reject) => {
+                let ajax = new XMLHttpRequest();
+
+                ajax.onload = function () {
+                    // success
+                    resolve(ajax.response);
+                };
+
+                ajax.onerror = function (error) {
+                    // failure  
+                    reject(e);
+                };
+
+                ajax.open("POST", "http://localhost:9090/api/post");
+                ajax.setRequestHeader("Content-Type", "application/json");
+                ajax.send(JSON.stringify(employees));
+            });
+        }
+        function putData() {
+            // the id will go in header
+            var employees = {
+                EmpNo: document.getElementById('empNo').value,
+                EmpName: document.getElementById('empName').value,
+                Designation: document.getElementById('designation').value,
+                Department: document.getElementById('dept').value,
+                Salary: document.getElementById('salary').value
+
+            };
+            let id = employees.EmpNo;
+            return new Promise((resolve, reject) => {
+                let ajax = new XMLHttpRequest();
+
+                ajax.onload = function () {
+                    // success
+                    resolve(ajax.response);
+                };
+
+                ajax.onerror = function (error) {
+                    // failure  
+                    reject(e);
+                };
+
+                ajax.open("PUT", `http://localhost:9090/api/update/${id}`);
+                ajax.setRequestHeader("Content-Type", "application/json");
+                ajax.send(JSON.stringify(employee));
+            });
+
+        }
+
+        function deleteData(id) {
+            // the id will go in header
+            ajax.open("DELETE", `http://localhost:9090/api/delete/${id}`);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form-group">
+            <div class="form-check">
+                <label>Emp No:</label>
+                <input type="text" id="empNo">
+            </div>
+            <div class="form-check">
+                <label>Emp Name:</label>
+                <input type="text" id="empName">
+            </div>
+            <div class="form-check">
+                <label>Designation:</label>
+                <input type="text" id="designation">
+            </div>
+            <div class="form-check">
+                <label>Deptarment:</label>
+                <input type="text" id="dept">
+            </div>
+            <div class="form-check">
+                <label>Salary:</label>
+                <input type="text" id="salary">
+            </div>
+            <div class="form-check form-check-inline">
+                <button class="btn btn-primary" id="saveBtn" onclick=postData()>Save</button>
+                <button class="btn btn-warning" id="loadBtn" onclick=getData()>Get Employees</button>
+                <button class="btn btn-danger" id="deletBtn" onclick=deleteData()>Delete</button>
+                <button class="btn btn-info" id="updateBtn" onclick=putData()>Update</button>
+            </div>
+        </form>
+    </div>
+    <div class="container" id="resp">
+        <table id="table" class="table-responsive">
+
+
+        </table>
+    </div>
+</body>
+
+</html>
