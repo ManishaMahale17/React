@@ -1,0 +1,27 @@
+{
+  "name": "training-project-backend",
+  "version": "1.0.0",
+  "main": "apiorm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^16.11.13"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.11.0",
+    "sequelize-auto": "^0.8.8",
+    "sequelize-cli": "^6.3.0"
+    
+  },
+  "type": "module"
+}
