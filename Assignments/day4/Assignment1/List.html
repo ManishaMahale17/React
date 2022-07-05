@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 50%;
+        }
+    </style>
+    <script>
+        var w;
+        function onClose() {
+            w.close();
+        }
+        window.onload = function () {
+            var button = document.getElementsByTagName('li');
+            for (var i = 0; i < button.length; i++) {
+                button[i].addEventListener('dragstart', function (event) { event.dataTransfer.setData('Text', event.target.id) }, false);
+            }
+            var destination = document.getElementById('destination');
+            destination.addEventListener('drop', function (event) {
+                event.preventDefault();
+                var id = event.dataTransfer.getData('Text');
+                event.target.appendChild(document.getElementById(id));
+                var a = prompt("Quantity", id);
+                var result = parseInt(id) * a;
+                document.getElementById('destination').innerHTML += "<li>" + result + "</li><button onclick='onClose()'>&times;</button> ";
+            }, false);
+            destination.addEventListener('dragover', function (event) { event.preventDefault(); }, false);
+            function onClose(){
+                return window.close();
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <h1>List of Products</h1>
+    <h3 style="height: 10px; width: auto;">Source</h3>
+    <div id="source" style="height: 100px;width: 400px;">
+        <ul id="products">
+            <li draggable="true" id="20000" value="20000" style="height: 30px;width: auto;">
+                Mobile - 20000/-
+            </li>
+            <li draggable="true" id="30000" value="30000" style="height: 30px;width: auto;">
+                Laptop - 30000/-
+            </li>
+            <li draggable="true" id="10000" value="10000" style="height: 30px;width: auto;">
+                TV -60000/-
+            </li>
+            <li draggable="true" id="7000" value="7000" style="height: 30px;width: auto;">
+                Tablet - 7000/-
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <h3 style="height: 10px; width: auto;">Destination</h3>
+    <div id="destination" style="height: 100px;width: 400px;"></div>
+</body>
+
+</html>
