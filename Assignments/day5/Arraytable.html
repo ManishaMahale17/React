@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+    <script>
+        window.onload = function () {
+
+            var Employees = [
+
+                { EmpNo: 1001, EmpName: 'Manisha', DeptNo: 2002, Salary: 10000.00 },
+                { EmpNo: 1002, EmpName: 'Vaibhav', DeptNo: 2002, Salary: 20000.00 },
+                { EmpNo: 1003, EmpName: 'Shital', DeptNo: 2003, Salary: 50000.00 },
+                { EmpNo: 1004, EmpName: 'Ajit', DeptNo: 2003, Salary: 30000.00 },
+                { EmpNo: 1005, EmpName: 'Pallavi', DeptNo: 2004, Salary: 30000.00 },
+                { EmpNo: 1006, EmpName: 'Sangam', DeptNo: 2004, Salary: 30000.00 },
+                { EmpNo: 1007, EmpName: 'Rahul', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1008, EmpName: 'Karishma', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1009, EmpName: 'Mangesh', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1010, EmpName: 'Dashrath', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1011, EmpName: 'Geeta', DeptNo: 2002, Salary: 10000.00 },
+                { EmpNo: 1012, EmpName: 'Yash', DeptNo: 2002, Salary: 20000.00 },
+                { EmpNo: 1013, EmpName: 'Shreyash', DeptNo: 2003, Salary: 50000.00 },
+                { EmpNo: 1014, EmpName: 'Dilip', DeptNo: 2003, Salary: 30000.00 },
+                { EmpNo: 1015, EmpName: 'Tanuja', DeptNo: 2004, Salary: 30000.00 },
+                { EmpNo: 1016, EmpName: 'Prashant', DeptNo: 2004, Salary: 30000.00 },
+                { EmpNo: 1017, EmpName: 'Prasad', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1018, EmpName: 'Manu', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1019, EmpName: 'Naina', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1020, EmpName: 'July', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1021, EmpName: 'Hira', DeptNo: 2002, Salary: 10000.00 },
+                { EmpNo: 1022, EmpName: 'Vaibhav', DeptNo: 2002, Salary: 20000.00 },
+                { EmpNo: 1023, EmpName: 'Mahesh', DeptNo: 2003, Salary: 50000.00 },
+                { EmpNo: 1024, EmpName: 'Leena', DeptNo: 2003, Salary: 30000.00 },
+                { EmpNo: 1025, EmpName: 'Kunal', DeptNo: 2004, Salary: 30000.00 },
+                { EmpNo: 1026, EmpName: 'Raj', DeptNo: 2004, Salary: 30000.00 },
+                { EmpNo: 1027, EmpName: 'Javed', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1028, EmpName: 'Ravi', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1029, EmpName: 'Yavraj', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1030, EmpName: 'Sarita', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1031, EmpName: 'Manali', DeptNo: 2002, Salary: 10000.00 },
+                { EmpNo: 1032, EmpName: 'Vaishnavi', DeptNo: 2002, Salary: 20000.00 },
+                { EmpNo: 1033, EmpName: 'Sheema', DeptNo: 2003, Salary: 50000.00 },
+                { EmpNo: 1034, EmpName: 'Amita', DeptNo: 2003, Salary: 30000.00 },
+                { EmpNo: 1035, EmpName: 'Piyu', DeptNo: 2004, Salary: 30000.00 },
+                { EmpNo: 1036, EmpName: 'Sangram', DeptNo: 2004, Salary: 30000.00 },
+                { EmpNo: 1037, EmpName: 'Shivani', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1038, EmpName: 'Radhika', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1039, EmpName: 'Rekha', DeptNo: 2005, Salary: 30000.00 },
+                { EmpNo: 1040, EmpName: 'Amit', DeptNo: 2005, Salary: 30000.00 },
+                
+        
+            
+            
+            
+            
+            
+            ];
+
+            var Departments = [
+                { DeptNo: 2002, DeptName: "Digital Service" },
+                { DeptNo: 2003, DeptName: "Cloud Service" },
+                { DeptNo: 2004, DeptName: "Human Resource" },
+                { DeptNo: 2005, DeptName: "Information Technology" }
+            ];
+
+
+            var dOptions;
+            for (var k = 0; k < Departments.length; k++) {
+                dOptions += '<option value="' + Departments[k].DeptNo + '">' + Departments[k].DeptName + '</option>';
+            }
+
+            document.getElementById('depts').innerHTML = dOptions;
+
+            document.getElementById('depts').addEventListener('change', function () {
+                var dno = this.options[this.selectedIndex].value;
+                generateTable(Employees, dno);
+            }, false);
+            generateTable(Employees, 0);
+
+
+            function generateTable(Employees, dno) {
+                var tbody = "";
+                if (parseInt(dno) === 0) {
+
+                    for (var i = 0; i < Employees.length; i++) {
+                            tbody += '<tr><td>' + Employees[i].EmpNo + '</td><td>' + Employees[i].EmpName + '</td><td>' + Employees[i].DeptNo + '</td><td>' + Employees[i].Salary + '</td></tr>';
+                                            }
+                } else {
+                    for (var i = 0; i < Employees.length; i++) {
+                            console.log(parseInt(dno));
+                            if (Employees[i].DeptNo === parseInt(dno)) {
+                                tbody += '<tr><td>' + Employees[i].EmpNo + '</td><td>' + Employees[i].EmpName + '</td><td>' + Employees[i].DeptNo + '</td><td>' + Employees[i].Salary + '</td></tr>';
+                            }
+                    }
+
+                }
+                document.getElementById("employees").innerHTML = tbody;
+            }
+
+           
+
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <label>Select Departments</label>
+        <select id="depts">
+            <div id="dv1"></div>
+            <!-- <option value="All" id="all">All</option>
+            <option value="Digital Service" id="ds"> Digital Service</option>
+            <option value="Cloud Service" id="cs">Cloud Service</option>
+            <option value="Human Resource" id="hr">Human Resource</option>
+            <option value="Information Technology" id="it">Information Technology</option> -->
+        </select>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>EmpNo</th>
+                        <th>EmpName</th>
+                        <th>DeptName</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody id="employees"></tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
