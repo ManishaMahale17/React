@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+
+        window.onload = function () {
+
+            var Employees  = [
+         { EmpNo: "1", EmpName: "George", DeptName: "IT", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "2", EmpName: "James", DeptName: "CS", Designation: "TESTER", Salary: "40000" },
+         { EmpNo: "3", EmpName: "Robert", DeptName: "ETC", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "4", EmpName: "Gemes", DeptName: "MECH", Designation: "TRAINER", Salary: "20000" },
+         { EmpNo: "5", EmpName: "Gargi", DeptName: "CIVIL", Designation: "MANAGER", Salary: "40000" },
+         { EmpNo: "6", EmpName: "Leena", DeptName: "IT", Designation: "TESTER", Salary: "30000" },
+         { EmpNo: "7", EmpName: "Savita", DeptName: "CS", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "8", EmpName: "Vaibhav", DeptName: "ETC", Designation: "TESTER", Salary: "34000" },
+         { EmpNo: "9", EmpName: "Ajit", DeptName: "MECH", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "10", EmpName: "Heera", DeptName: "CIVIL", Designation: "MANAGER", Salary: "30000" },
+         { EmpNo: "11", EmpName: "Shanu", DeptName: "IT", Designation: "TRAINER", Salary: "20000" },
+         { EmpNo: "12", EmpName: "Meena", DeptName: "CS", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "13", EmpName: "Gita", DeptName: "IT", Designation: "TESTER", Salary: "30000" },
+         { EmpNo: "14", EmpName: "Payal", DeptName: "MECH", Designation: "Developer", Salary: "50000" },
+         { EmpNo: "15", EmpName: "Shrikant", DeptName: "IT", Designation: "TESTER", Salary: "30000" },
+         { EmpNo: "16", EmpName: "Sheetal", DeptName: "CS", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "17", EmpName: "Sangam", DeptName: "CIVIL", Designation: "TRAINER", Salary: "30000" },
+         { EmpNo: "18", EmpName: "Prasad", DeptName: "ETC", Designation: "TESTER", Salary: "30000" },
+         { EmpNo: "19", EmpName: "Pallavi", DeptName: "MECH", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "20", EmpName: "Sweety", DeptName: "IT", Designation: "Developer", Salary: "36000" },
+         { EmpNo: "21", EmpName: "Mithila", DeptName: "CS", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "22", EmpName: "Javed", DeptName: "IT", Designation: "TESTER", Salary: "39000" },
+         { EmpNo: "23", EmpName: "Faran", DeptName: "ETC", Designation: "TRAINER", Salary: "30000" },
+         { EmpNo: "24", EmpName: "Sheema", DeptName: "IT", Designation: "Developer", Salary: "50000" },
+         { EmpNo: "25", EmpName: "Riya", DeptName: "CIVIL", Designation: "TRAINER", Salary: "30000" },
+         { EmpNo: "26", EmpName: "Sharda", DeptName: "IT", Designation: "TESTER", Salary: "30000" },
+         { EmpNo: "27", EmpName: "Sangram", DeptName: "IT", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "28", EmpName: "Vikram", DeptName: "CS", Designation: "TRAINER", Salary: "30000" },
+         { EmpNo: "29", EmpName: "Komal", DeptName: "IT", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "30", EmpName: "Jyotika", DeptName: "IT", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "31", EmpName: "Hitesh", DeptName: "MECH", Designation: "MANAGER", Salary: "30000" },
+         { EmpNo: "32", EmpName: "Hiral", DeptName: "CIVIL", Designation: "TRAINER", Salary: "30000" },
+         { EmpNo: "33", EmpName: "Mayuri", DeptName: "CS", Designation: "TESTER", Salary: "30000" },
+         { EmpNo: "34", EmpName: "Praful", DeptName: "IT", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "35", EmpName: "Pritam", DeptName: "MECH", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "36", EmpName: "Priya", DeptName: "IT", Designation: "MANAGER", Salary: "30000" },
+         { EmpNo: "37", EmpName: "Sarikam", DeptName: "ETC", Designation: "TRAINER", Salary: "50000" },
+         { EmpNo: "38", EmpName: "Neena", DeptName: "CS", Designation: "Developer", Salary: "30000" },
+         { EmpNo: "39", EmpName: "Nita", DeptName: "CS", Designation: "MANAGER", Salary: "30000" },
+         { EmpNo: "40", EmpName: "Nilesh", DeptName: "CIVIL", Designation: "Developer", Salary: "60000" },
+        ];
+        var space = " ";
+
+            var tbody = document.getElementById("tbdy");
+
+            for (var index = 0; index <= 4; index++) {
+
+                tbody.innerHTML += "<tr class='table-primary'><td>" + Employees[index].EmpNo + "</td><td>" + Employees[index].EmpName + "</td><td>" + Employees[index].Salary + "</td><td>" + Employees[index].DeptName + "</td><td>" + Employees[index].Designation + "</td></tr>";
+
+            }
+
+
+
+            var first = document.getElementById("first");
+
+            first.addEventListener('click',function(){
+
+                tbody.innerHTML =space;
+
+                console.log(tbody);
+
+                for (var i = 0; i < 4; i++) {
+
+                    tbody.innerHTML += "<tr class='table-primary'><td>" + Employees[i].EmpNo + "</td><td>" + Employees[i].EmpName + "</td><td>" + Employees[i].Salary + "</td><td>" + Employees[i].DeptName + "</td><td>" + Employees[i].Designation + "</td></tr>";
+
+                }
+
+                console.log(tbody);
+
+            },false)
+
+
+
+
+            var f = document.getElementById("1");
+
+            f.addEventListener('click',function(){
+
+                tbody.innerHTML =space;
+
+                console.log(tbody);
+
+                for (var i = 0; i <= 4; i++) {
+
+                    tbody.innerHTML += "<tr class='table-primary'><td>" + Employees[i].EmpNo + "</td><td>" + Employees[i].EmpName + "</td><td>" + Employees[i].Salary + "</td><td>" + Employees[i].DeptName + "</td><td>" + Employees[i].Designation + "</td></tr>";
+
+                }
+
+                console.log(tbody);
+
+            },false);
+
+
+
+            var sec = document.getElementById("2");
+
+            sec.addEventListener('click',function(){
+
+                tbody.innerHTML =space;
+
+                console.log(tbody);
+
+                for (var i = 5; i <= 9; i++) {
+
+                    tbody.innerHTML += "<tr class='table-primary'><td>" + Employees[i].EmpNo + "</td><td>" + Employees[i].EmpName + "</td><td>" + Employees[i].Salary + "</td><td>" + Employees[i].DeptName + "</td><td>" + Employees[i].Designation + "</td></tr>";
+
+                }
+
+                console.log(tbody);
+
+            },false)
+
+
+
+            var third = document.getElementById("3");
+
+            third.addEventListener('click',function(){
+
+                tbody.innerHTML =space;
+
+                console.log(tbody);
+
+                for (var i = 10; i <= 14; i++) {
+
+                    tbody.innerHTML += "<tr class='table-primary'><td>" + Employees[i].EmpNo + "</td><td>" + Employees[i].EmpName + "</td><td>" + Employees[i].Salary + "</td><td>" + Employees[i].DeptName + "</td><td>" + Employees[i].Designation + "</td></tr>";
+
+                }
+
+                console.log(tbody);
+
+            },false)
+
+
+
+            var fourth = document.getElementById("4");
+
+            fourth.addEventListener('click',function(){
+
+                tbody.innerHTML =space;
+
+                console.log(tbody);
+
+                for (var i = 15; i <= 19; i++) {
+
+                    tbody.innerHTML += "<tr class='table-primary'><td>" + Employees[i].EmpNo + "</td><td>" + Employees[i].EmpName + "</td><td>" + Employees[i].Salary + "</td><td>" + Employees[i].DeptName + "</td><td>" + Employees[i].Designation + "</td></tr>";
+
+                }
+
+                console.log(tbody);
+
+            },false)
+
+
+
+            var fifth = document.getElementById("5");
+
+            fifth.addEventListener('click',function(){
+
+                tbody.innerHTML =space;
+
+                console.log(tbody);
+
+                for (var i = 20; i <= 24; i++) {
+
+                    tbody.innerHTML += "<tr class='table-primary'><td>" + Employees[i].EmpNo + "</td><td>" + Employees[i].EmpName + "</td><td>" + Employees[i].Salary + "</td><td>" + Employees[i].DeptName + "</td><td>" + Employees[i].Designation + "</td></tr>";
+
+                }
+
+                console.log(tbody);
+
+            },false);
+
+
+
+            var sixth = document.getElementById("6");
+
+            sixth.addEventListener('click',function(){
+
+                tbody.innerHTML =space;
+
+                console.log(tbody);
+
+                for (var i = 25; i <= 29; i++) {
+
+                    tbody.innerHTML += "<tr class='table-primary'><td>" + Employees[i].EmpNo + "</td><td>" + Employees[i].EmpName + "</td><td>" + Employees[i].Salary + "</td><td>" + Employees[i].DeptName + "</td><td>" + Employees[i].Designation + "</td></tr>";
+
+                }
+
+                console.log(tbody);
+
+            },false);
+
+
+
+            var seventh = document.getElementById("7");
+
+            seventh.addEventListener('click',function(){
+
+                tbody.innerHTML =space;
+
+                console.log(tbody);
+
+                for (var i = 30; i <= 34; i++) {
+
+                    tbody.innerHTML += "<tr class='table-primary'><td>" + Employees[i].EmpNo + "</td><td>" + Employees[i].EmpName + "</td><td>" + Employees[i].Salary + "</td><td>" + Employees[i].DeptName + "</td><td>" + Employees[i].Designation + "</td></tr>";
+
+                }
+
+                console.log(tbody);
+
+            },false)
+
+
+
+            var eighth = document.getElementById("8");
+
+            eighth.addEventListener('click',function(){
+
+                tbody.innerHTML =space;
+
+                console.log(tbody);
+
+                for (var i = 35; i <= 39; i++) {
+
+                    tbody.innerHTML += "<tr class='table-primary'><td>" + Employees[i].EmpNo + "</td><td>" + Employees[i].EmpName + "</td><td>" + Employees[i].Salary + "</td><td>" + Employees[i].DeptName + "</td><td>" + Employees[i].Designation + "</td></tr>";
+
+                }
+
+                console.log(tbody);
+
+            },false);
+
+
+
+            var last = document.getElementById("last");
+
+            last.addEventListener('click',function(){
+
+                // last.setAttribute("disabled","true")
+
+
+
+                tbody.innerHTML = space;
+
+                console.log(tbody);
+
+                for (var i = 35; i <= 39; i++) {
+
+                    tbody.innerHTML += "<tr class='table-primary'><td>" + Employees[i].EmpNo + "</td><td>" + Employees[i].EmpName + "</td><td>" + Employees[i].Salary + "</td><td>" + Employees[i].DeptName + "</td><td>" + Employees[i].Designation + "</td></tr>";
+
+                }
+
+                console.log(tbody);
+
+            },false)
+
+        }
+
+    </script>
+ </head >
+ <body>
+    <div class="container">
+
+
+
+        <table  id="table" class="table table-bordered table-striped table-warning">
+
+            <thead>
+
+                <tr>
+
+                    <th>Employee Number</th>
+
+                    <th>Employee Name</th>
+
+                    <th>Salary</th>
+
+                    <th>Department</th>
+
+                    <th>Designation</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tbdy"></tbody>
+
+        </table>
+
+
+
+        <ul class="pagination justify-content-end" >
+
+            <li class="page-item">
+
+                <a class="page-link" id="first" href="#">&laquofirst</a>
+
+                <!-- &larr; -->
+
+            </li>
+
+            <li class="page-item">
+
+                <a class="page-link" id="1" href="#">1</a>
+
+            </li>
+
+            <li class="page-item">
+
+                <a class="page-link" id="2" href="#">2</a>
+
+            </li>
+
+            <li class="page-item">
+
+                <a class="page-link" id="3" href="#">3</a>
+
+            </li>
+
+            <li class="page-item">
+
+                <a class="page-link" id="4" href="#">4</a>
+
+            </li>
+
+            <li class="page-item">
+
+                <a class="page-link" id="5" href="#">5</a>
+
+            </li>
+
+            <li class="page-item">
+
+                <a class="page-link" id="6" href="#">6</a>
+
+            </li>
+
+            <li class="page-item">
+
+                <a class="page-link" id="7" href="#">7</a>
+
+            </li>
+
+            <li class="page-item">
+
+                <a class="page-link" id="8" href="#">8</a>
+
+            </li>
+
+            <li class="page-item">
+                
+
+                <a class="page-link" id="last" href="#">Last&raquo;</a>
+
+            </li>
+
+        </ul>
+
+
+
+    </div>
+
+         </body>
+</html >
