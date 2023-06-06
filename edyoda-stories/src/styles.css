@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;800&display=swap");
+header {
+  width: 100%;
+}
+#container-header {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  padding: 16px 78px;
+}
+nav {
+  display: flex;
+  box-sizing: border-box;
+}
+.logo {
+  display: inline-block;
+  width: 150px;
+  padding: 5px;
+}
+#EdYoda {
+  width: 130px;
+  font-size: 32px;
+  color: #0084ff;
+  display: flex;
+  margin: 0;
+  font-weight: 600;
+}
+#Stories {
+  margin: 0;
+  font-weight: 500;
+  font-family: Raleway;
+  font-style: Italic;
+  display: flex;
+}
+/* Style The Dropdown Button */
+.dropbtn {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: 0;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: whitesmoke;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: lightgray;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: ;
+}
+#blank {
+  width: 20%;
+}
+#cont-shatxt {
+  display: inline-block;
+  width: 300px;
+  height: auto;
+  padding-inline: 20px;
+  float: right;
+}
+.shallow-text {
+  display: inline;
+  flex-direction: right;
+  height: 50;
+  align-content: center;
+  justify-content: center;
+  color: rgb(0, 0, 0, 0.6);
+}
+#but-on {
+  width: 250px;
+  background-color: #fff;
+  padding: 5px;
+  margin-right: 3%;
+  margin-left: auto;
+}
+.Gotoweb {
+  display: inline-block;
+  background-color: #0084ff;
+  color: white;
+  padding: 0px;
+  padding-inline: 30px;
+  margin-right: 2%;
+  border-radius: 25px;
+  word-wrap: none;
+  height: 50px;
+}
+main {
+  background-color: lightcyan;
+  padding-inline: 10%;
+}
+#cont-main {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 16px;
+  margin-inline: 5%;
+}
+#cont-trend {
+  width: 90%;
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
+.trend-head {
+  display: block;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  font-family: Raleway;
+}
+.filter-icon-text {
+  font-weight: 600;
+  font-family: Raleway;
+  margin-left: 8px;
+  padding-right: 8px;
+}
+.Filter {
+  align-items: left;
+  justify-items: left;
+  margin-left: 8px;
+}
+.category-link {
+  display: inline-block;
+  padding: 6px 14px;
+  width: auto;
+  color: #0084ff;
+  border: 1px solid #0084ff;
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: Raleway;
+}
+.category-link:active {
+  color: #fff;
+  background-color: #0084ff;
+}
+.category-link:hover {
+  color: #fff;
+  background-color: #0084ff;
+}
+#all {
+  color: #fff;
+  background-color: #0084ff;
+}
+.filter-links {
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding-top: 16px;
+}
+
+#items-cont-grid {
+  width: auto;
+  background-color: lightcyan;
+  margin-inline: 0%;
+  align-items: baseline;
+}
+.one-item {
+  width: calc(33.3% - 10px - 2px);
+  margin: 4px;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px grey;
+  cursor: pointer;
+  align-items: baseline;
+  margin-top: 16px;
+}
+.item-image {
+  width: 100%;
+  height: 176px;
+}
+.image-only {
+  width: 100%;
+  height: 176px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.Cont-text {
+  padding: 10px 24px;
+  min-height: 250px;
+}
+.item-heading {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+.Author-cont {
+  padding-top: 4px;
+}
+.Author-name {
+  color: #0096ff;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 500;
+}
+.Date-article {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  font-weight: 300;
+  padding-inline: 10px;
+}
+.About-item {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  margin: 4px 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+.item-text {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+footer {
+  display: flex;
+  background-color: #172146;
+  padding: 80px 16%;
+  color: white;
+  width: 100%;
+}
+.filterIcon {
+  width: 25px;
+}
+.filterhead {
+  display: inline;
+}
+.latest {
+  width: fit-content;
+  margin: 0;
+  font-family: Raleway, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+  text-align: left;
+  color: #000;
+}
