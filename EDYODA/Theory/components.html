@@ -1,0 +1,140 @@
+
+Components: 
+<!-- // It is independent and reusable bits of code.2types:class components and function components.
+//Now a days use function com along with Hooks
+piece of code that can reuse,such as function.more powerful than function
+header,footer best example of component
+****************************************************************Types:
+high oreder comp
+pure component
+contrlled component
+uncontrlled component
+-->
+App.js it is inbuild component
+
+**Functional Components 👍
+<!-- -Simple Components
+-Use function components as much as possible
+--Absence of this keyword
+--Solution without using state
+--mainly responsible for the UI
+--Stateless/Dumb/Presentational  -->
+
+
+**Class components
+<!-- --More feaure rich
+--maintain their own private data-state
+--Complex UI logic
+--Provide lifecycle hooks
+--Stateful/smart/container -->
+___________________________________________________________
+send data child to parent component: 
+(Lifting State Up)
+<!-- 
+    several components need to reflect the same changing data.
+    data can be satte props ,variables any..
+    --
+
+ -->
+ eg.
+ User.js
+ <!-- function User(props)
+{
+    const name="Manu"
+    return(
+        <div>
+            <h1>User Name is : </h1>
+            <button onClick={()=>props.getData(name)} >Click Me</button>
+        </div>
+    )
+}
+
+export default User; -->
+_________________
+app.js
+<!-- import React from 'react'
+import './App.css';
+import User from './User'
+function App() {
+  function getName(name)
+  {
+    alert(name)
+  }
+  return (
+    <div className="App">
+      <h1>Lifting State Up</h1>
+      <User getData={getName} />
+    </div>
+  );
+}
+
+export default App; -->
+_________________________________________________
+PURE component:
+<!-- it is feature used in class components.
+it stop re-rendering of ur component.
+it match value in state if 2nd name is same is frist value then cannt rerender but if both are  issmattched then rerendered component
+-->
+we can transfer data from super child to super parent is is possible.
+_________________________________________________
+contrlled component:
+<!-- 
+  they apply only input fiels or form available in the component then use controlled component
+ in react input filed contrrled through state.
+
+
+ -->
+ _________________________________
+ Uncontrlled component:
+<!-- 
+  they apply only input fiels or form available in the component then use uncontrolled component
+  directly handle through DOM.
+  (getelementById etc)
+ --input fields not cotrolled through state that is uncontrolled.
+  -->
+ ________________________________________________
+HOC(higher-oreder-Components):
+<!-- 
+atleast 2 components required
+--one component take a input(props) gives to another component as a functiion.
+
+
+
+
+)))))))))))))))))))))))))))))))
+import './App.css';
+import React, { useRef, useState } from 'react'
+function App() {
+  return (
+    <div className="App">
+      <h1>HOC </h1>
+      <HOCRed cmp={Counter} />
+      <HOCGreen cmp={Counter} />
+      <HOCBlue cmp={Counter} />
+
+    </div>
+  );
+}
+function HOCRed(props)
+{
+  return <h2 style={{backgroundColor:'red',width:100}}>Red<props.cmp /></h2>
+}
+function HOCGreen(props)
+{
+  return <h2 style={{backgroundColor:'green',width:100}}>Grren<props.cmp /></h2>
+}
+function HOCBlue(props)
+{
+  return <h2 style={{backgroundColor:'blue',width:100}}>blue <props.cmp /></h2>
+}
+function Counter()
+{
+  const [count,setCount]=useState(0)
+  return<div>
+    <h3>{count}</h3>
+    <button onClick={()=>setCount(count+1)}>Update</button>
+  </div>
+}
+
+export default App;
+ -->

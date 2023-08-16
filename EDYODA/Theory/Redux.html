@@ -1,0 +1,151 @@
+Redux
+<!-- 
+--a container where u can store your whole application data.
+--we call it to state management.
+It doesn't belong to component state.
+like array to store data. it is in frontend.
+
+ -->
+ Why we need Redux:
+ <!-- communication between components is easily managed by using redux. -->
+
+ Redux Architecture:
+ View: 
+ <!-- (eg-buttons,checkbox,input box),which is show us on browser.we write this is in react    component. -->
+
+ Action:
+ <!-- collect data from component or API(when we perform action on buttons)
+--data comes from view or through API
+-->
+
+ Reducer:
+ <!-- Get data from action and send to store -->
+ Store:
+ <!-- state of complete application
+    complete user data store here.when need then send to view.
+
+-->
+*********One redux:one Store alws************
+<!-- data alws unidirectional. -->
+___________________________________________________
+INSTALLATION:
+npm -v
+node -v
+npm install redux
+npm install react-redux
+_____________________________________________________________
+transfer data from one comp to onother comp use props.
+___________________________________________________
+props:
+<!-- 
+import React from "react";
+const User = (props) => {
+  const { data } = props;
+  return (
+    <div>
+      <h1>User Comp</h1>
+      <h4>{data.name}</h4>
+      <h4>{data.email
+      }</h4>
+    </div>
+  );
+};
+export default User; -->
+App.js
+<!-- 
+import User from "./User";
+export default function App() {
+  return (
+    <div className="App">
+      <User data={{ name: "Manisha", email: "manu@gmail.com" }} />
+    </div>
+  );
+} -->
+__________________________________________________________
+Folder Structure:
+<!-- 
+1.components:
+2.container:redux and react connect(component and services connected here)
+3.service: all redux here
+Actions:
+reducers:
+ -rootReducer:combines all reducers files here.
+constants:which data match in action and reducer that tell us contants. 
+-->
+___________________________________________________when we use redux then we components with containers .dont directly use components.
+<!-- Home.js==>homeContainer.js==>App.js -->
+---------------------------------------------
+Action:
+<!-- action sends data fro  react component  to redux store.
+
+-->
+ contants file- <!-- same file used in action and reducer. -->
+REDUCER:
+<!-- data from actions it send to store.reducer filterout data and sebd to store.
+-->
+-rootReducer:
+<!-- all reducers merge in single reducer that we can store in one place. -->
+container:
+<!-- redux and react connected in container.
+
+
+-->
+mapDispachToPrpos:
+<!-- component to redux store data send then use mapDispachToPrpos. -->
+mapStateToPrpos:
+<!-- redux store data  to send 3rd party . -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

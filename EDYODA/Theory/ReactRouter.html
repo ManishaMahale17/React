@@ -1,0 +1,81 @@
+React Router:
+<!-- 
+In application we have to make pages then router is use.make a diff pages using react router.less promming less logic writting in router. dont required to refresh page.
+
+React Router is a JavaScript framework that lets us handle client and server-side routing in React applications. 
+
+It enables the creation of single-page web or mobile apps that allow navigating without refreshing the page. 
+
+It also allows us to use browser history features while preserving the right application view
+
+npm i react-router-dom
+
+
+ -->
+ Example:
+ <!-- import './App.css';
+import {BrowserRouter,Routes, Route} from 'react-router-dom';
+import User from './Components/Users';
+function App(){
+  return (
+    <div className="App">
+      <BrowserRouter>
+      <Routes>
+      <Route path="/user" element={<User/>}/>
+      </Routes>
+      </BrowserRouter>
+     
+    </div>
+  )
+}
+export default App; -->
+_______________________
+Links:
+<!-- 
+    simple link for router:
+    --not use anchor tag for make links.bcz it does not behave like react(page refresh automatically)but using rounter page doesnt refressh.
+
+    import './App.css';
+import {BrowserRouter,Routes, Route,Link} from 'react-router-dom';
+import User from './Components/Users';
+function App(){
+  return (
+    <div className="App">
+      <BrowserRouter>
+      <Link to="/user">UserPage</Link>
+      <br/>
+      <Link to="/">Home page</Link>
+      <Routes>
+      <Route path="/" element={<h1>Home page</h1>}/>
+      <Route path="/user" element={<User/>}/>
+      </Routes>
+      </BrowserRouter>
+     
+    </div>
+  )
+}
+export default App;
+ -->
+ ____________________________________________
+Params:
+<!-- 
+ Used for dynamic data.
+ dynamic data send to db and show content on basis of request to client.
+ --eg.click user then getr detailed data of that
+ Population of world---India,USA---India---MH,delhi---pune,mumbai
+ --thoussands of user data avaible so thousand times we have make page it is not possible so pass parameter and get dynamic data.
+ using API.
+ set dyamic value n click to get data.
+ useParam:it is hook basically.
+
+
+ -->
+____________________________________________
+searchParams Hook:
+<!-- 
+    It is hook type of react router not react js.
+    data in query foramt  eg filter?age=18
+
+ -->
+ useNavigate Hook of React-router dom .not react js hook.
+ useLocation hook:histery of params pass.

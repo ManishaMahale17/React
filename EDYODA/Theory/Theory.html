@@ -1,0 +1,79 @@
+<!-- ****Components: -->
+React apps are made out of components. A component is a piece of the UI (user interface) that has its own logic and appearance. A component can be as small as a button, or as large as an entire page.
+{               {}  }
+|                |
+Jsx property     object
+______________________________________________________
+<!-- 1)Functional Components: -->
+-- Function components can be written using much less code, are easier to understand
+--! In below example we create User component that we use multiple times 
+<!-- App.js -->
+    import './App.css';
+    import Users from './Components/Users';
+    
+    function App() {
+      return (
+        <div className="App">
+          <h1>Hello//</h1>
+          <Users/>
+          <Users/>
+          <Users/>
+          <Users/>
+        </div>
+      );
+    }
+    
+    export default App;</App>
+
+    <!-- User.js -->
+    function Users(){
+        return (
+    <h1>Users Component</h1>
+        )
+        
+    }
+    export default Users;
+    ______________________________________________________
+    2)Class Component:
+    A class component must include the extends React.Component statement. This statement creates an inheritance to React.
+    <!-- UserClass.js -->
+    import React,{Component} from 'react';
+class UserClass extends Component {
+    render() {
+        return (
+            <h1>Hello From UserClass</h1>
+        )
+    }
+}
+export default UserClass;
+_______________________________________________________
+<!-- Context: -->
+Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+--context(Warehouse)
+--provider(delivery boy)
+--Consumer--useContext(you)
+*********************************************************************
+<!-- Conditional Rendering: -->
+import { useState } from "react";
+function Profile() {
+  const[loggedIn,setLoggedIn]=useState(false)
+  return (
+    <div>
+      {loggedIn?<h1>Manisha</h1>:<h1>Tambe</h1>}
+    </div>
+  );
+}
+export default Profile;
+<!-- multiple users -->
+import { useState } from "react";
+function Profile() {
+  const[loggedIn,setLoggedIn]=useState(1)
+  return (
+    <div>
+      {loggedIn==1?<h1>Manisha 1</h1> : loggedIn==2?<h1>Manisha 2</h1>:<h1>Manisha 3</h1>}
+        
+    </div>
+  );
+}
+export default Profile;
+_______________________________________________________________

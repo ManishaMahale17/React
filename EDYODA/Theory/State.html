@@ -1,0 +1,93 @@
+State:
+<!-- 
+  It is object.we store data in state like variables.
+
+But in react we use state instead of variables bcz when we use variable it didnt update component but using state component wiil update.(variable ne data update nahi karu shakt)
+ -->  
+
+---------
+<!-- when State and props will change in changes in react app.
+when state change then it will rendered data. -->
+____________________
+<!-- export default function App() {
+    let data = "Mahale";
+    function updateData() {
+      data = "Tambe";
+      alert(data);
+    }
+    return (
+      <div className="App">
+        <h1>{data}</h1>
+        <button onClick={updateData}>Update data</button>
+      </div>
+    );
+  } -->
+  --useState it is a hook it allows us to maintain state,update etc.
+  --destrure data
+  const [data,setData]=useState("Mahale")
+          |     |                 |               
+          data  update data      bydefault data
+<!-- 
+          import { useState } from "react";
+
+          export default function App() {
+            const [data, setData] = useState("mahale");
+            function updateData() {
+              setData("Tambe");
+            }
+            return (
+              <div className="App">
+                <h1>{data}</h1>
+                <button onClick={updateData}>Update data</button>
+              </div>
+            );
+          }          -->
+-------
+-State is Public:but dont use outside  -State.
+Eg.
+<!-- 
+import {useState} from 'react';
+function App(){
+  const [data,setData]=useState(0)
+  function updateData(){
+    setData(data+1)
+  }
+   return (
+              <div className="App">
+                <h1>{data}</h1>
+                <button onClick={updateData}>Update data</button>
+              </div>
+            );
+}
+
+
+
+ -->
+
+___Class Componenet state
+
+
+<!-- import React, { Component } from "react";
+import "./styles.css";
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data: "mahale"
+    };
+  }
+  apple() {
+    this.setState({ data: "Thambe" });
+  }
+  render() {
+    return (
+      <div className="App">
+        <h1>{this.state.data}</h1>
+        <button onClick={() => this.apple()}></button>
+      </div>
+    );
+  }
+}
+
+export default App; -->
+--state dont use outside components .

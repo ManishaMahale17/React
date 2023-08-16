@@ -1,0 +1,88 @@
+Props:
+--When we make a component and we want to transfer data then we use props.(like parameters)
+--properties means props.pass dynamic data ,multiple data we can pass here.
+
+--App.js
+<!-- import "./styles.css";
+import Student from "./Student";
+
+export default function App() {
+  return (
+    <div className="App">
+      <h1>Props</h1>
+      <Student name={"Mahale"}  />
+      <Student name={"Tambe"} email="manu@gmail.com" other={{add="pune",mobile="67777"}} />
+
+    </div>
+  );
+} -->
+
+--Student.js
+<!-- 
+  function Student(props) {
+    return (
+      <div>
+        <h1>Name: {props.name}</h1>
+        <h3>Email:{props.email}</h3>
+      </div>
+    );
+  }
+  export default Student; 
+-->
+Output:
+Name: Mahale
+Name: Tambe
+Email: manu@gmail.com
+
+<!-- we can change css using this in react
+  <div style={{backgroundColor:"blue" margin:10}} -->
+
+   ---App.js:update
+  <!--import "./styles.css";
+import Student from "./Student";
+import React, { useState } from "react";
+
+export default function App() {
+  const [name, setName] = useState("Mahale");
+  return (
+    <div className="App">
+      <h1>Props</h1>
+      <Student name={name} />
+      <button
+        onClick={() => {
+          setName("Tambe");
+        }}
+      >
+        Update Name{" "}
+      </button>
+    </div>
+  );
+} -->
+----------In class comp render is must.
+CLASS COMP --> props
+In class comp useState is not use.
+
+app.js
+<!-- import "./styles.css";
+import Student from "./Student";
+
+export default function App() {
+  return (
+    <div className="App">
+      <h1>Props</h1>
+      <Student name="Mahale" email="manu@gmail.com" />
+    </div>
+  );
+} -->
+student.js
+
+<!-- import React from "react";
+
+export default class Student extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello {this.props.name}</h1>
+        <h2>Email{this.props.email}</h2>
+      </div>
+    ); -->

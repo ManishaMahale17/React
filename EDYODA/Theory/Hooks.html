@@ -1,0 +1,100 @@
+<!-- 
+    In functional components lifecycle method used using hooks.
+   --with hooks, we can use class component features in functional components such as state,lifecycle,pure component,etc.but in functional components there are no inbuilt methods.
+   eg:useState,useCallback,useContex,useMemo,useRef etc types hooks present in react.
+   hooks begins with (use)  reserved word.
+   ____
+
+   we cannot use hook, useState or any other use__ because it is a feature for functional component. 
+   It will throw error "React Hook \"useState\" cannot be called in a class component. React Hooks must be called in a React function component or a custom React Hook function."". If we want to use state in class then we can declare it under constructor.
+
+ -->
+ import React,{useState} from 'react';
+ <!-- 
+    useState it is hook .
+  -->
+  ****useEffect****
+  <!-- 
+    use as an lifecyle method in functional component.
+     when comp created ,any state update,props updated then it called but on condition basis.
+    --all in packakges.
+    useEffect hook is combibnation of componentDidMount,componentDidUpdate ,componentWillUnmount.
+
+    
+____________ComponnentDidMount____________________________________
+import React,{useEffect} from 'react';
+
+function App() {
+  useEffect(() => {
+    alert("useEffect")
+
+})
+  return (
+    <div className="App">
+      <h1>Hello//</h1>
+    </div>
+  );
+}
+
+export default App;
+________________________ComponentDidUpdate_________________
+
+
+import './App.css';
+import React,{useEffect,useState} from 'react';
+
+
+function App() {
+  const [count,setCount]=useState(0)
+  useEffect(() => {
+   console.log("useEffect")
+
+})
+  return (
+    <div className="App">
+      <h1>Hello {count}</h1>
+      <button onClick={() =>setCount(count+1)}>Upadate Counter</button>
+   
+    </div>
+  );
+}
+
+export default App;
+
+
+
+   -->
+   ____________________________
+   <!-- useEffect with specific State:
+   _____________________________
+   useEffect with specific Props: -->
+   ______________________________________________
+
+   useMemo Hook:
+   <!-- --it is used to enhanced your application performance.
+   used in functional component.
+   when update any state then some functions call automatically that doent need to be update it decreases the performance of application.
+   it takes callback function.
+  -->
+  ______________________________________________RRef:
+  <!-- 
+    use:class compoinent
+    less use in application bcz it manipulated reacts js so appliaction is running slow so use  Ref less as possible .
+     forcefuuly manipulated react js(hide,show,color cahnge)so use less saif]d by react js.
+     used in emaergacy only (in form cases used )it change propery
+
+   -->
+   ______________________________________________
+   UseRef:
+   <!-- 
+    it is hook used in functional comp only
+    why use useRef:it helf focus color,value handle with useREf
+    dom manipulations madification in html directly handle buy using useRef in functional comp.
+
+    -->
+    forwardRef:
+    <!-- 
+      advance version of Ref
+      to access dom from different comp.
+      one comp ref transfer from another comp.
+     -->

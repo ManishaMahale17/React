@@ -1,0 +1,80 @@
+Why REACT:
+<!-- React it is library of js for building user interfaces.React
+React is used to build single-page applications.
+React allows us to create reusable UI components.
+Write once use everyWhere -->
+
+
+NODE JS
+<!-- //It is js runtime environment help us to run js on our browser. -->
+
+JSX: Javascript XML
+<!-- //jsx allows us to write HTML in react. It makes easier to write and add HTML in React.
+//JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement()  and/or appendChild() methods. -->
+
+
+NPM:
+<!-- // it is used to installed packeges ,we have to download it permently(like buy) -->
+
+
+NPX:
+<!-- // without downloading packeges we have to use react app for one Time,temporary use for one time(like rent) -->
+
+
+
+
+
+
+---
+
+******************************************************
+npx create-react-app my-frist-app
+cd my-frist-app
+npm start
+******************************************************* 
+--npm run build :  used for build in production.used to static site like html css js optimised version of website. 
+*****************************************************
+Folder Stucture of react-app:
+--1.Node-modules:
+ <!-- it contains all packages that used create-recat -app,modules all -->
+
+--2.public:
+<!-- //html files: <div id="root"></div> with the help of js this is populated. it is imp :but we dont need to write abnything here we just work all in src folder. -->
+
+--3.src:
+<!-- //app.css,app.js,index.css,index.js
+//we use src folder for making and use of components
+-packeage.json: contain all packeges that are installed in node-modules.
+--index.js:render app.js
+--App.js: all components we see on browser side which is present in app.js file -->
+
+****************************************************
+Props:
+<!-- Props stand for properties.
+// Props are arguments passed into react components.
+//Props are passed to components via HTML attributes.
+//React Propes are like function arguments in js and attributes in HTML.
+//eg.if my form is a components in that i filled all my details that is props. -->
+eg.
+--Navbar.js:
+export default function Navbar(props) {
+    return (
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <div className="container-fluid">
+      <a className="navbar-brand" href="/">{props.title}</a>
+    )}
+--app.js
+ <Navbar title="Vegies4U" links="Link" />
+ we can use like this
+
+ *****************************************************************************
+ State:(awastha)
+<!-- //eg I have form component in which heading or content or footer that is state 
+-eg suppose we have store heading in a variable .if we change variable properties it willl reflect all .
+-state belongs to component.
+WHEN we use use classBased comp then directly use { this.state } but in functional component we cannot use like this so use hooks.
+useState:it is a hook.
+eg const[text,setText] =useState('Enter text');
+const[count,setCount] =useState(0);//synthx for Hooks.
+when we change count value it will automatically change value in all positions. -->
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
